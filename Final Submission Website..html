@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftTouch - Fashion Hub</title>
+    <style>
+        /* Resetting some default styles for consistency */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            scroll-behavior: smooth;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        /* Header Styles */
+        .header-container {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            max-width: 100px;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-list li {
+            margin-right: 20px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .nav-list a:hover {
+            color: #ffcc00;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        /* Hero Section Styles */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%; /* Adjusted width to accommodate three slides */
+    height: 100%;
+    display: flex;
+    animation: slide 15s infinite linear;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    33.33% {
+        transform: translateX(-100%);
+    }
+    66.66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+        .hero-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .falltrends {               /*fall trends and summer collection part */
+            width: calc(48% - 20px);   
+            height: 600px;              /*fall trends box size */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 60px;
+            transition: transform 0.3s ease;
+        }
+
+        .falltrends:hover {       /*hovering image*/
+            transform: scale(1.05);
+        }
+
+        .falltrends img {
+            width: 100%;           /*image size adjusments*/  /* dont change */
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .falltrends-text {     /*text part dont change*/
+            padding: 20px;
+            max-height: 150px;
+            overflow: hidden;
+        }
+
+        /* Trending Section Styles and eveyday wear*/
+        .trendandeveryday {
+            width: 200%;
+            height: 300px;         /*box size adjusments*/
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .trendandeveryday-heading {
+            text-align: left;
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .trendandeveryday-images {
+            display: flex;
+            overflow-x: auto;
+            margin-bottom: -10px;
+        }
+
+        .trendandeveryday a {
+            width: 450px;
+            margin-right: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .trendandeveryday a:hover {
+            transform: scale(1.05);
+        }
+
+        .trendandeveryday img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer div {
+            margin-bottom: 15px;
+        }
+        .subscribe-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto; /* Center the button horizontally with top and bottom margin */
+    padding: 10px;
+    text-align: center;
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #ffa500; /* Change the background color on hover */
+}
+    </style>
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="logo">
+            <img src="https://yotam-bezalel.com/wp-content/uploads/2019/03/all_logos_no_white_1-85.png" alt="Website Logo">
+        </div>
+
+        <nav class="nav-container">
+            <ul class="nav-list">
+                <li class="dropdown">
+                    <a href="#" class="nav-list">Men</a>
+                    <div class="dropdown-content">
+                        <a href="#">Shirts</a>
+                        <a href="#">T-Shirts</a>
+                        <a href="#">Jeans</a>
+                        <a href="#">Briefs</a>
+                        <a href="#">Gym wear</a>
+                        <a href="#">Hoodies</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-list">Women</a>
+                    <div class="dropdown-content">
+                        <a href="#">Dresses</a>
+                        <a href="#">Tops</a>
+                        <a href="#">Inners</a>
+                        <a href="#">Hoodies</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-list">Kids</a>
+                <div class="dropdown-content">
+                    <a href="#">Shirts</a>
+                    <a href="#">Pants</a>
+                </div></li>
+
+                <li class="dropdown">
+                    <a href="#" class="nav-list">Accessories</a>
+                <div class="dropdown-content">
+                    <a href="#">Glasses</a>
+                    <a href="#">watches</a>
+                    <a href="#">Wrist Bands</a>
+                    <a href="#">Other Wearables</a>
+
+                </div></li>
+                
+                <li><a href="#" class="nav-list">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-image">
+            <div class="slide">
+                <img src="https://static05.jockey.in/uploads/homepagetemplates/images/juniors-desk-07oct2023.png" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="https://static05.jockey.in/uploads/homepagetemplates/images/hero-banner-mow-07oct2023.png" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="https://s7ap1.scene7.com/is/image/adityabirlafashion/RBK_HB_D_Mens%20Apparel?resMode=sharp2&wid=1550&hei=650" alt="Slide 3">
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="falltrends">
+            <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/621358/41/mod01/fnd/IND/fmt/png/Classics-Unisex-Hoodie" alt="Fall Trends">
+            <div class="content-text">
+                <h2>Fall Trends</h2>
+                <p>Explore the latest fall fashion trends. From cozy sweaters to stylish jackets, we've got you
+                    covered.</p>
+            </div>
+        </div>
+
+        <div class="falltrends">
+            <img src="https://static05.jockey.in/uploads/homepagetemplates/images/style-of-the-month-desk-07oct2023.png" alt="Summer Collection">
+            <div class="content-text">
+                <h2>Summer Collection</h2>
+                <p>Discover our vibrant summer collection. Stay cool and stylish in the heat with our trendy
+                    summer
+                    outfits.</p>
+            </div>
+        </div>
+
+        <div class="trendandeveryday">
+            <h2 class="trendandeveryday-heading">Trending Now</h2>
+            <div class="trendandeveryday-images">
+                <a href="https://your-link-1.com" target="_blank">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/658525/06/mod01/fnd/IND/fmt/png/teamLIGA-Men's-Football-Tracksuit" alt="Trending Image 1">
+                </a>
+                <a href="https://your-link-2.com" target="_blank">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/538084/26/mod01/fnd/IND/fmt/png/Porsche-Design-Hybrid-Men's-Jacket" alt="Trending Image 2">
+                </a>
+                <a href="https://your-link-3.com" target="_blank">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/523238/51/mod01/fnd/IND/fmt/png/Seasons-coolCELL-Women's-Running-T-Shirt" alt="Trending Image 3">
+                </a>
+            </div>
+        </div>
+
+        <div class="trendandeveryday">
+            <h2 class="trendandeveryday-heading">Everyday Wear</h2>
+            <div class="trendandeveryday-images">
+                <a href="https://your-link-1.com" target="_blank">
+                    <img src="https://assets.trendin.com/img/app/categorymedia/production/1/1348-38-12919.png?q=75&auto=format&w=310" alt="Everyday Wear Image 1">
+                </a>
+                <a href="https://your-link-2.com" target="_blank">
+                    <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fb4%2F4d%2Fb44d15dff679748ccbac35d202b4b55f6fce572a.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="every wear img 2">
+                </a>
+                <a href="https://your-link-3.com" target="_blank">
+                    <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F40%2F06%2F4006e8d8613328407c1307c332002e6b3781624d.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="every day wear Image 3">
+                </a> 
+            </div>
+        </div>
+    </main>
+    <a href="file:///D:/IWD%20MINI/FINAL%20FORM1.html" class="subscribe-button" id="subscribe-link">Subscribe</a>
+
+    <footer>
+        <div>&copy; 2023 SoftTouch Fashion Hub</div>
+        <div>Fashion Street, Bengaluru </div>
+    </footer>
+
+    
+</body>
+
+</html>
